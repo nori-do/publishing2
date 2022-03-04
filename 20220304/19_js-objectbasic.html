@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+    </style>
+    <script>
+        // 자바스크립트 역시 자바처럼 new 키워드를 이용해
+        // 클래스를 만들고, 그 클래스의 객체를 생성해서
+        // 사용합니다.
+        // 역시 JS에서의 클래스의 목적도 변수와 메서드를
+        // 같은 소속으로 담아 사용하기 위함이며
+        // 마치 자바의 java.util.*처럼
+        // 미리 만들어져있는 재아클래스를 쓸 수도 있습니다.
+
+        // 내장 클래스로 대표적인 예시는 document가 있고
+        // 이외에도 Date, Array, Math등 자바와 유사한
+        // 여러 종류의 객체들이 존재한다.
+
+        // 날짜 관련 객체 Date 활용
+        document.write("<h1>현재 날짜/시간정보</h1>");
+
+        var today = new Date(); // 현 시각 날짜정보를 얻기 위해 생성
+        var nowYear = today.getFullYear();
+        var nowMonth = today.getMonth() + 1; // 월(0~11)
+        var nowDate = today.getDate();
+        var nowDay = today.getDay(); //요일(0:일 ~ 6 : 토)
+        var nowHours = today.getHours();
+        var nowMinutes = today.getMinutes();
+        var nowSeconds = today.getSeconds();
+        var nowTime = today.getTime();
+
+        // 위의 정보를 아래 쪽에 document.write()로 출력해봅니다.
+        document.write(today + "<br/>");
+        document.write("년도 : " + nowYear + "<br/>");
+        document.write("월 : " + nowMonth + "<br/>");
+        document.write("일 : " + nowDate + "<br/>");
+        document.write("요일 : " + nowDay + "<br/>");
+        document.write("시 : " + nowHours + '<br/>');
+        document.write("분 : " + nowMinutes + "<br/>");
+        document.write("초 : " + nowSeconds + "<br/>");
+        document.write("유닉스 시간 :" + nowTime + "<br/>");
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
