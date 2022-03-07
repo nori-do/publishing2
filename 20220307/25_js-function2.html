@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+    </style>
+    <script>
+        var num = 0;// 그림 번호
+
+        console.log(document.getElementById("pic"));
+        
+        function nextPic(){
+            num++; // 다음 그림 번호로 이동
+
+            // 마지막 번호까지 돌면 다시 0으로 돌아오는 장치를 추가해주세요
+            if(num >= 3){
+                num = 0;
+                document.getElementById("pic").src
+                    = "img/img" + num + ".jpg";
+            }
+
+            document.getElementById("pic").src
+                = "img/img" + num + ".jpg"; // 그림 번호 바꾸기
+            return false; // 그림 변경만 하고 a태그 클릭으로 인한 주소 이동은 막기
+        }
+
+        // 된분들은 prevPic()을 이용해 뒤로가기 기능도 추가해주세요
+        function prevPic(){
+            num--;
+
+            if(num < 0){
+                num = 2;
+            }
+            document.getElementById("pic").src
+                    = "img/img" + num + ".jpg";
+            return false; 
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>이미지 넘기기</h1>
+
+    <img width="200px" src="img0.jpg" id="pic">
+
+    <a href="#" onclick="return nextPic()">&gt;&gt;</a>
+    
+    <p>뒤로가기</p>
+    <a href="#" onclick="return prevPic()">&lt;&lt;</a>
+    <script>
+        //console.log(document.getElementById("pic").src);
+        // id="pic" 인 태그 내부의 src 속성값을 가져옴
+    </script>
+</body>
+</html>
