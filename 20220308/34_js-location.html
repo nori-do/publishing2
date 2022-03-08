@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // location은 현재 브라우저가 위치한 url값을 제공하거나
+        // 혹은 url변경에 관여한다.
+        // location.hash - 주소창 url에서 # 뒤에 오는 걸 반환
+        // location.host - 주소창 url에서 도메인명 반환
+        // location.hostname - 주소창 url에서 도메인명 반환
+        // location. href - 주소창 url 에서 메인 다음경로 반환
+        // location.pathmane - 주소창 url에서 메인 다음경로 반환
+        // location.port - 주소창 url에서 포트번호 반환
+        // location.protocol - 주소창 url에서 프로토콜 반환
+
+        // location코드
+        document.write("<h1>hash :" + location.hash + "<br/>");
+        document.write("<h1>host :" + location.host + "<br/>");
+        document.write("<h1>hostname :" + location.hostname + "<br/>");
+        document.write("<h1>href :" + location.href + "<br/>");
+        document.write("<h1>pathname :" + location.pathname + "<br/>");
+        document.write("<h1>port :" + location.port + "<br/>");
+        document.write("<h1>protocol :" + location.protocol + "<br/>");
+
+        //href를 이용한 브라우저 주소 이동
+        location.href = "https://www.namver.com";
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
