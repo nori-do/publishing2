@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .newh1{
+            color: blue;
+        }
+    </style>
+    <script>
+       // #h1space 내부에 #createh1을 클릭할때마다
+        // h1태그(넣고 싶은 단어는 아무렇게나 넣어주세요)가 생성되는
+        //로직을 작성해주세요.
+
+        //문서 모두 로딩 후 실행할 자바스크립트 코드 세팅
+        window.onload = function(){
+            var h1space = document.getElementById('h1space')
+            var createh1 = document.getElementById('createh1')
+
+            createh1.onclick = function(){
+                var h1 = document.createElement("h1");//<h1></h1>생성(배치 안됌)
+                var text1 = document.createTextNode("아무말~~");
+                h1.setAttribute("class", "newh1");
+                console.log(h1);
+                h1.appendChild(text1);
+                console.log(h1space);
+                h1space.appendChild(h1);
+            }
+            
+            // 위 코드의 h1에 class 속성을 부여해주세요. 속성값은 마음대로 부여해주세요.
+            // 그리고 <style>태그 내에 해당 클래스 속속요소의 글씨색을 파란색으로 바꿔주세요
+                
+        } 
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="h1space">
+
+    </div>
+    <button id="createh1">h1 생성</button>
+</body>
+</html>
